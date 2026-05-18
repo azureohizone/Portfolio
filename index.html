@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muyyi Srors — Developer Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#home" class="nav-logo">MS<span class="dot">.</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about" data-text="About">About</a>
+    <a href="#projects" data-text="Projects">Projects</a>
+    <a href="#skills" data-text="Skills">Skills</a>
+    <a href="#contact" data-text="Contact">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-overlay" id="mobileOverlay">
+  <button class="overlay-close" id="overlayClose">✕</button>
+  <nav class="mobile-nav">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </nav>
+  <div class="overlay-footer">
+    <a href="https://github.com/azureohizone" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/muyyi-srors-8a8128290/" target="_blank">LinkedIn</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-circle c1"></div>
+    <div class="hero-circle c2"></div>
+    <div class="grain"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-reveal>Software Developer &nbsp;·&nbsp; Phnom Penh, Cambodia</p>
+    <h1 class="hero-name" data-reveal>
+      Muyyi<br>
+      <em>Srors</em>
+    </h1>
+    <p class="hero-bio" data-reveal>
+      Final-year Software Development student building clean, functional software. From front-end interfaces to data pipelines — I care about the details.
+    </p>
+    <div class="hero-actions" data-reveal>
+      <a href="#projects" class="btn-primary">View Work</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-meta" data-reveal>
+    <div class="hero-stat">
+      <span class="stat-num">3+</span>
+      <span class="stat-label">Projects</span>
+    </div>
+    <div class="hero-stat">
+      <span class="stat-num">HSK2</span>
+      <span class="stat-label">200/200</span>
+    </div>
+    <div class="hero-stat">
+      <span class="stat-num">Final</span>
+      <span class="stat-label">Year</span>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-about">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-left">
+        <p class="label" data-reveal>01 — About</p>
+        <h2 class="section-heading" data-reveal>A Developer<br><em>Built to Learn</em></h2>
+        <p class="body-text" data-reveal>
+          I'm Muyyi Srors, studying Software Development at Norton University in Phnom Penh, Cambodia. I work across the full development process — from UI implementation and database design to scripting and data analysis.
+        </p>
+        <p class="body-text" data-reveal>
+          Beyond code, I earned an HSK2 certification with a perfect score of 200/200 and I'm actively working toward HSK4 — because I believe the same discipline it takes to learn a language applies to becoming a great developer.
+        </p>
+        <a href="#contact" class="link-arrow" data-reveal>Open to internships ↗</a>
+      </div>
+      <div class="about-right" data-reveal>
+        <div class="about-card">
+          <div class="photo-placeholder">
+            <span class="initials">MS</span>
+          </div>
+          <div class="fact-list">
+            <div class="fact"><span class="f-label">Location</span><span class="f-val">Phnom Penh, Cambodia</span></div>
+            <div class="fact"><span class="f-label">University</span><span class="f-val">Norton University</span></div>
+            <div class="fact"><span class="f-label">Also at</span><span class="f-val">TUX Global Institute</span></div>
+            <div class="fact"><span class="f-label">Year</span><span class="f-val">Final Year</span></div>
+            <div class="fact"><span class="f-label">Status</span><span class="f-val open-badge">Open to Internships</span></div>
+            <div class="fact"><span class="f-label">Mandarin</span><span class="f-val">HSK2 · 200/200</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <div class="timeline-section">
+      <p class="label" data-reveal>Experience &amp; Education</p>
+      <div class="timeline">
+        <div class="timeline-item" data-reveal>
+          <div class="tl-year">2022 – Now</div>
+          <div class="tl-content">
+            <h4>Software Development</h4>
+            <p class="tl-place">Norton University · Phnom Penh</p>
+            <p class="tl-desc">Full-stack coursework covering Java, Python, databases, system design, and software engineering principles. Active thesis project on AI-powered e-commerce sentiment analysis.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-reveal>
+          <div class="tl-year">Ongoing</div>
+          <div class="tl-content">
+            <h4>App / Web Development</h4>
+            <p class="tl-place">TUX Global Institute · Phnom Penh</p>
+            <p class="tl-desc">Practical training in modern application and web development, focusing on industry tools and real-world project workflows.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-reveal>
+          <div class="tl-year">2024</div>
+          <div class="tl-content">
+            <h4>HSK2 Certification</h4>
+            <p class="tl-place">CAM-ASEAN Foreign Language School</p>
+            <p class="tl-desc">Achieved a perfect score of 200/200 on the HSK Level 2 Mandarin exam. Currently preparing for HSK4.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-reveal>
+          <div class="tl-year">Applied</div>
+          <div class="tl-content">
+            <h4>IT / Software Internship Applications</h4>
+            <p class="tl-place">ATECH · ICT Professional Training Center</p>
+            <p class="tl-desc">Applying for roles in Network Engineering, System Infrastructure, Network & Security, and Software Development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section-projects">
+  <div class="container">
+    <div class="projects-header">
+      <p class="label" data-reveal>02 — Projects</p>
+      <h2 class="section-heading" data-reveal>Selected Work</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <article class="project-card featured" data-reveal>
+        <div class="card-visual v1">
+          <div class="card-mockup">
+            <div class="mock-bar"></div>
+            <div class="mock-title"></div>
+            <div class="mock-row"></div>
+            <div class="mock-row short"></div>
+            <div class="mock-grid">
+              <div class="mock-cell"></div><div class="mock-cell"></div><div class="mock-cell"></div>
+            </div>
+          </div>
+          <span class="card-num">01</span>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Web Development</span>
+            <span class="card-year">2025</span>
+          </div>
+          <h3 class="card-title">Mini Mart POS System</h3>
+          <p class="card-desc">A point-of-sale web application for a mini mart with product management, transaction handling, and receipt generation built with vanilla HTML, CSS, and JavaScript.</p>
+          <div class="card-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="https://github.com/azureohizone" target="_blank" class="card-cta">View on GitHub ↗</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card" data-reveal>
+        <div class="card-visual v2">
+          <div class="card-mockup mobile-mockup">
+            <div class="mock-header-mobile"></div>
+            <div class="mock-pins">
+              <div class="pin tall"></div>
+              <div class="pin"></div>
+              <div class="pin mid"></div>
+              <div class="pin tall"></div>
+            </div>
+          </div>
+          <span class="card-num">02</span>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Mobile App</span>
+            <span class="card-year">2025</span>
+          </div>
+          <h3 class="card-title">Pinterest Mobile Clone</h3>
+          <p class="card-desc">A Flutter/Dart mobile application replicating Pinterest's masonry grid layout, pin browsing, and board management with clean state management.</p>
+          <div class="card-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Dart</span>
+            <span class="tag">Mobile</span>
+          </div>
+          <a href="https://github.com/azureohizone" target="_blank" class="card-cta">View on GitHub ↗</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card" data-reveal>
+        <div class="card-visual v3">
+          <div class="card-mockup desktop-mockup">
+            <div class="mock-sidebar">
+              <div class="sb-item"></div><div class="sb-item"></div><div class="sb-item active"></div><div class="sb-item"></div>
+            </div>
+            <div class="mock-main-content">
+              <div class="mock-table-row header"></div>
+              <div class="mock-table-row"></div>
+              <div class="mock-table-row"></div>
+              <div class="mock-table-row"></div>
+            </div>
+          </div>
+          <span class="card-num">03</span>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Desktop App</span>
+            <span class="card-year">2025</span>
+          </div>
+          <h3 class="card-title">Supermarket Inventory System</h3>
+          <p class="card-desc">A Java/Swing desktop application with MySQL backend for managing supermarket stock, sales records, and reporting with full CRUD operations.</p>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Swing</span>
+            <span class="tag">MySQL</span>
+          </div>
+          <a href="https://github.com/azureohizone" target="_blank" class="card-cta">View on GitHub ↗</a>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card" data-reveal>
+        <div class="card-visual v4">
+          <div class="card-mockup data-mockup">
+            <div class="mock-chart">
+              <div class="bar" style="height:40%"></div>
+              <div class="bar" style="height:75%"></div>
+              <div class="bar" style="height:55%"></div>
+              <div class="bar" style="height:90%"></div>
+              <div class="bar" style="height:65%"></div>
+            </div>
+            <div class="mock-labels">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <span class="card-num">04</span>
+        </div>
+        <div class="card-info">
+          <div class="card-meta">
+            <span class="card-category">Data Analytics</span>
+            <span class="card-year">2025</span>
+          </div>
+          <h3 class="card-title">Iris Dataset EDA</h3>
+          <p class="card-desc">Python data analysis project using pandas, NumPy, matplotlib and scikit-learn to perform exploratory analysis and classification on the Iris dataset.</p>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">pandas</span>
+            <span class="tag">scikit-learn</span>
+          </div>
+          <a href="https://github.com/azureohizone" target="_blank" class="card-cta">View on GitHub ↗</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="projects-more" data-reveal>
+      <p>More projects and experiments live on GitHub</p>
+      <a href="https://github.com/azureohizone" target="_blank" class="btn-outline">github.com/azureohizone ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section-skills">
+  <div class="container">
+    <p class="label" data-reveal>03 — Skills</p>
+    <h2 class="section-heading" data-reveal>Technologies<br><em>&amp; Tools</em></h2>
+
+    <div class="skills-layout">
+      <div class="skill-group" data-reveal>
+        <p class="group-label">Languages</p>
+        <div class="skill-pills">
+          <div class="pill"><span class="pill-name">HTML</span><span class="pill-level">Proficient</span></div>
+          <div class="pill"><span class="pill-name">CSS</span><span class="pill-level">Proficient</span></div>
+          <div class="pill"><span class="pill-name">JavaScript</span><span class="pill-level">Proficient</span></div>
+          <div class="pill"><span class="pill-name">Java</span><span class="pill-level">Proficient</span></div>
+          <div class="pill"><span class="pill-name">Python</span><span class="pill-level">Proficient</span></div>
+          <div class="pill"><span class="pill-name">C++</span><span class="pill-level">Proficient</span></div>
+          <div class="pill"><span class="pill-name">Dart</span><span class="pill-level">Familiar</span></div>
+          <div class="pill"><span class="pill-name">SQL</span><span class="pill-level">Familiar</span></div>
+        </div>
+      </div>
+
+      <div class="skill-group" data-reveal>
+        <p class="group-label">Frameworks &amp; Tools</p>
+        <div class="skill-pills">
+          <div class="pill"><span class="pill-name">Flutter</span><span class="pill-level">Familiar</span></div>
+          <div class="pill"><span class="pill-name">MySQL</span><span class="pill-level">Proficient</span></div>
+          <div class="pill"><span class="pill-name">Git / GitHub</span><span class="pill-level">Proficient</span></div>
+          <div class="pill"><span class="pill-name">Jupyter Notebook</span><span class="pill-level">Proficient</span></div>
+          <div class="pill"><span class="pill-name">pandas / NumPy</span><span class="pill-level">Familiar</span></div>
+          <div class="pill"><span class="pill-name">scikit-learn</span><span class="pill-level">Familiar</span></div>
+          <div class="pill"><span class="pill-name">Power BI</span><span class="pill-level">Familiar</span></div>
+        </div>
+      </div>
+
+      <div class="skill-group" data-reveal>
+        <p class="group-label">Soft Skills</p>
+        <div class="skill-pills">
+          <div class="pill"><span class="pill-name">Problem Solving</span><span class="pill-level">Strong</span></div>
+          <div class="pill"><span class="pill-name">System Design</span><span class="pill-level">Developing</span></div>
+          <div class="pill"><span class="pill-name">Collaboration</span><span class="pill-level">Strong</span></div>
+          <div class="pill"><span class="pill-name">Attention to Detail</span><span class="pill-level">Strong</span></div>
+        </div>
+      </div>
+
+      <div class="skill-group" data-reveal>
+        <p class="group-label">Languages (Human)</p>
+        <div class="skill-pills">
+          <div class="pill"><span class="pill-name">Khmer</span><span class="pill-level">Native</span></div>
+          <div class="pill"><span class="pill-name">English</span><span class="pill-level">B2</span></div>
+          <div class="pill"><span class="pill-name">Mandarin</span><span class="pill-level">HSK2 · HSK4 goal</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-left">
+        <p class="label" data-reveal>04 — Contact</p>
+        <h2 class="contact-heading" data-reveal>Let's Work<br><em>Together</em></h2>
+        <p class="body-text" data-reveal>I'm open to internship opportunities and collaborative projects. Whether you have a role in mind or just want to connect — reach out.</p>
+
+        <div class="contact-direct" data-reveal>
+          <a href="mailto:muyyi22@gmail.com" class="direct-link">
+            <span class="dl-label">Email</span>
+            <span class="dl-val">muyyi22@gmail.com ↗</span>
+          </a>
+          <a href="https://github.com/azureohizone" target="_blank" class="direct-link">
+            <span class="dl-label">GitHub</span>
+            <span class="dl-val">azureohizone ↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/muyyi-srors-8a8128290/" target="_blank" class="direct-link">
+            <span class="dl-label">LinkedIn</span>
+            <span class="dl-val">muyyi-srors ↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap" data-reveal>
+        <div class="contact-form">
+          <h3 class="form-title">Send a Message</h3>
+          <div class="form-group">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="femail">Email</label>
+            <input type="email" id="femail" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" rows="5" placeholder="What's on your mind?"></textarea>
+          </div>
+          <button class="btn-submit" id="formSubmit">Send Message</button>
+          <p class="form-note" id="formNote"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">Muyyi Srors</span>
+    <span class="footer-copy">© 2026 · Built with care in Phnom Penh</span>
+    <div class="footer-links">
+      <a href="https://github.com/azureohizone" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/muyyi-srors-8a8128290/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
