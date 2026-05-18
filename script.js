@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ─── CUSTOM CURSOR ─────────────────────────── */
 const cursor = document.getElementById('cursor');
 const cursorDot = document.getElementById('cursorDot');
@@ -165,3 +166,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+=======
+// Reveal elements on scroll using IntersectionObserver
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, 100);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => observer.observe(el));
+>>>>>>> 260a629bcb6fa3ac80a3a07cec0f4d1cd99b550b
