@@ -114,46 +114,6 @@ const barObserver = new IntersectionObserver((entries) => {
 const dataViz = document.querySelector('.v4');
 if (dataViz) barObserver.observe(dataViz);
 
-/* ─── CONTACT FORM ─────────────────────────── */
-const submitBtn = document.getElementById('formSubmit');
-const formNote = document.getElementById('formNote');
-
-if (submitBtn) {
-  submitBtn.addEventListener('click', () => {
-    const name = document.getElementById('fname').value.trim();
-    const email = document.getElementById('femail').value.trim();
-    const msg = document.getElementById('fmsg').value.trim();
-
-    if (!name || !email || !msg) {
-      formNote.style.color = '#ba1a1a';
-      formNote.textContent = 'Please fill in all fields.';
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      formNote.style.color = '#ba1a1a';
-      formNote.textContent = 'Please enter a valid email address.';
-      return;
-    }
-
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-
-    setTimeout(() => {
-      submitBtn.textContent = 'Message Sent ✓';
-      formNote.style.color = '#004ac6';
-      formNote.textContent = `Thanks, ${name}! I'll get back to you soon.`;
-      document.getElementById('fname').value = '';
-      document.getElementById('femail').value = '';
-      document.getElementById('fmsg').value = '';
-      setTimeout(() => {
-        submitBtn.textContent = 'Send Message';
-        submitBtn.disabled = false;
-        formNote.textContent = '';
-      }, 4000);
-    }, 1200);
-  });
-}
-
 /* ─── SMOOTH LINK SCROLL OFFSET (for fixed nav) ─────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
