@@ -136,11 +136,22 @@ nav {
   cursor: none;
 }
 .mobile-nav {
-  display: flex; flex-direction: column; align-items: center; gap: 2.5rem;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  backdrop-filter: none;
+  animation: none;
 }
 .mobile-link {
   font-family: var(--serif);
-  font-size: 2.5rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
   color: var(--ink);
   text-decoration: none;
   transition: color 0.2s;
@@ -1059,6 +1070,7 @@ footer { background: var(--bg); border-color: var(--line); padding-inline: max(2
 @media (max-width: 480px) {
   .hero-name { font-size: 3.5rem; }
   .section-heading, .contact-heading { font-size: 2rem; }
+  .overlay-close { right: 1.5rem; }
   .hero-actions { width: 100%; }
   .hero-actions a { justify-content: center; width: 100%; }
 }
