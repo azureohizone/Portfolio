@@ -114,6 +114,49 @@ const barObserver = new IntersectionObserver((entries) => {
 const dataViz = document.querySelector('.v4');
 if (dataViz) barObserver.observe(dataViz);
 
+/* ─── CONTACT FORM ─────────────────────────── */
+const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('formSubmit');
+const formNote = document.getElementById('formNote');
+
+if (contactForm && submitBtn && formNote) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+    formNote.textContent = '';
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(contactForm)
+      });
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Message could not be sent.');
+      }
+
+      contactForm.reset();
+      submitBtn.textContent = 'Message Sent ✓';
+      formNote.style.color = '#004ac6';
+      formNote.textContent = 'Thanks! Your message has been sent successfully.';
+    } catch (error) {
+      submitBtn.textContent = 'Send Message';
+      formNote.style.color = '#ba1a1a';
+      formNote.textContent = error.message || 'Something went wrong. Please try again.';
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}
+
 /* ─── SMOOTH LINK SCROLL OFFSET (for fixed nav) ─────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {

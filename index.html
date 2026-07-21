@@ -378,10 +378,27 @@
         </div>
 
         <div class="contact-form-wrap" data-reveal>
-          <div class="typeform-embed" data-tf-widget="jGguTMTB" data-tf-inline-on-mobile></div>
-          <noscript>
-            <a href="https://form.typeform.com/to/jGguTMTB" target="_blank" rel="noopener noreferrer">Open the contact form</a>
-          </noscript>
+          <form class="contact-form" id="contactForm">
+            <h3 class="form-title">Send a Message</h3>
+            <input type="hidden" name="access_key" value="778455e9-f8ed-496a-bb18-55fc2caa0387">
+            <input type="hidden" name="subject" value="New message from Muyyi Srors Portfolio">
+            <input type="hidden" name="from_name" value="Muyyi Srors Portfolio">
+            <input type="checkbox" name="botcheck" class="form-botcheck" tabindex="-1" autocomplete="off">
+            <div class="form-group">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+              <label for="fmsg">Message</label>
+              <textarea id="fmsg" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit" id="formSubmit">Send Message</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </div>
     </div>
@@ -399,7 +416,6 @@
     </div>
   </footer>
 
-  <script src="https://embed.typeform.com/next/embed.js"></script>
   <script src="script.js"></script>
 </body>
 
