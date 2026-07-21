@@ -4,7 +4,7 @@ A personal developer portfolio built with HTML, CSS, and vanilla JavaScript.
 
 ## Structure
 - `index.html` — Main page (single-page with anchor sections)
-- `style.css` — All styles, dark theme, responsive
+- `style.css` — Ethos light theme and responsive styles
 - `script.js` — Scroll reveal, custom cursor, nav, contact form
 
 ## Sections

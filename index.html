@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Muyyi Srors — Developer Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -100,7 +100,8 @@
       </div>
       <div class="about-right" data-reveal>
         <div class="about-card">
-          <div class="photo-placeholder">
+          <div class="about-photo">
+            <img src="./Image/photo.JPG" alt="Muyyi Srors">
             <span class="initials">MS</span>
           </div>
           <div class="fact-list">
@@ -169,15 +170,7 @@
       <!-- Project 1 -->
       <article class="project-card featured" data-reveal>
         <div class="card-visual v1">
-          <div class="card-mockup">
-            <div class="mock-bar"></div>
-            <div class="mock-title"></div>
-            <div class="mock-row"></div>
-            <div class="mock-row short"></div>
-            <div class="mock-grid">
-              <div class="mock-cell"></div><div class="mock-cell"></div><div class="mock-cell"></div>
-            </div>
-          </div>
+          <img class="project-image" src="./Image/mini-mart-pos.png" alt="Mini Mart POS dashboard showing products, cart items, totals, and checkout controls">
           <span class="card-num">01</span>
         </div>
         <div class="card-info">
@@ -186,7 +179,7 @@
             <span class="card-year">2025</span>
           </div>
           <h3 class="card-title">Mini Mart POS System</h3>
-          <p class="card-desc">A point-of-sale web application for a mini mart with product management, transaction handling, and receipt generation built with vanilla HTML, CSS, and JavaScript.</p>
+          <p class="card-desc">A lightweight browser-based POS for product management, stock intake, checkout, and sales reports. Built with vanilla HTML, CSS, and JavaScript, with data stored locally in the browser.</p>
           <div class="card-tags">
             <span class="tag">HTML</span>
             <span class="tag">CSS</span>
@@ -199,15 +192,7 @@
       <!-- Project 2 -->
       <article class="project-card" data-reveal>
         <div class="card-visual v2">
-          <div class="card-mockup mobile-mockup">
-            <div class="mock-header-mobile"></div>
-            <div class="mock-pins">
-              <div class="pin tall"></div>
-              <div class="pin"></div>
-              <div class="pin mid"></div>
-              <div class="pin tall"></div>
-            </div>
-          </div>
+          <img class="project-image" src="./Image/pinterest-flutter-clone.png" alt="Dark Flutter mobile interface with a staggered image feed and bottom navigation">
           <span class="card-num">02</span>
         </div>
         <div class="card-info">
@@ -216,30 +201,20 @@
             <span class="card-year">2025</span>
           </div>
           <h3 class="card-title">Pinterest Mobile Clone</h3>
-          <p class="card-desc">A Flutter/Dart mobile application replicating Pinterest's masonry grid layout, pin browsing, and board management with clean state management.</p>
+          <p class="card-desc">A static Flutter UI clone recreating a dark masonry feed, search, notifications, messages, and profile screens with local assets and simple widget state.</p>
           <div class="card-tags">
             <span class="tag">Flutter</span>
             <span class="tag">Dart</span>
             <span class="tag">Mobile</span>
           </div>
-          <a href="https://github.com/azureohizone" target="_blank" class="card-cta">View on GitHub ↗</a>
+          <a href="https://github.com/azureohizone/Printerest_App" target="_blank" class="card-cta">View on GitHub ↗</a>
         </div>
       </article>
 
       <!-- Project 3 -->
       <article class="project-card" data-reveal>
         <div class="card-visual v3">
-          <div class="card-mockup desktop-mockup">
-            <div class="mock-sidebar">
-              <div class="sb-item"></div><div class="sb-item"></div><div class="sb-item active"></div><div class="sb-item"></div>
-            </div>
-            <div class="mock-main-content">
-              <div class="mock-table-row header"></div>
-              <div class="mock-table-row"></div>
-              <div class="mock-table-row"></div>
-              <div class="mock-table-row"></div>
-            </div>
-          </div>
+          <img class="project-image" src="./Image/supermarket-inventory-sales.png" alt="Java Swing supermarket inventory window showing stock levels, sales totals, and manager access">
           <span class="card-num">03</span>
         </div>
         <div class="card-info">
@@ -247,12 +222,12 @@
             <span class="card-category">Desktop App</span>
             <span class="card-year">2025</span>
           </div>
-          <h3 class="card-title">Supermarket Inventory System</h3>
-          <p class="card-desc">A Java/Swing desktop application with MySQL backend for managing supermarket stock, sales records, and reporting with full CRUD operations.</p>
+          <h3 class="card-title">Supermarket Inventory &amp; Sales System</h3>
+          <p class="card-desc">A Java Swing desktop POS backed by six normalized MySQL tables, with full Manager access, a Cashier-only POS view, and separated UI and data-access layers.</p>
           <div class="card-tags">
-            <span class="tag">Java</span>
-            <span class="tag">Swing</span>
+            <span class="tag">Java Swing</span>
             <span class="tag">MySQL</span>
+            <span class="tag">JDBC</span>
           </div>
           <a href="https://github.com/azureohizone" target="_blank" class="card-cta">View on GitHub ↗</a>
         </div>
@@ -261,18 +236,7 @@
       <!-- Project 4 -->
       <article class="project-card" data-reveal>
         <div class="card-visual v4">
-          <div class="card-mockup data-mockup">
-            <div class="mock-chart">
-              <div class="bar" style="height:40%"></div>
-              <div class="bar" style="height:75%"></div>
-              <div class="bar" style="height:55%"></div>
-              <div class="bar" style="height:90%"></div>
-              <div class="bar" style="height:65%"></div>
-            </div>
-            <div class="mock-labels">
-              <span></span><span></span><span></span>
-            </div>
-          </div>
+          <img class="project-image" src="./Image/iris-dataset-eda.png" alt="Iris dataset exploratory analysis with summary metrics, sample data, and a three-species scatter plot">
           <span class="card-num">04</span>
         </div>
         <div class="card-info">

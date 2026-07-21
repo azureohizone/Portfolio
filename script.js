@@ -74,9 +74,9 @@ reveals.forEach(el => {
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 60) {
-    nav.style.borderBottomColor = 'rgba(240,236,228,0.14)';
+    nav.style.borderBottomColor = '#c3c6d7';
   } else {
-    nav.style.borderBottomColor = 'rgba(240,236,228,0.08)';
+    nav.style.borderBottomColor = '#dce2f7';
   }
 });
 
@@ -89,7 +89,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       navLinks.forEach(link => link.style.color = '');
       const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (active) active.style.color = '#c8a96e';
+      if (active) active.style.color = '#004ac6';
     }
   });
 }, { threshold: 0.4 });
@@ -125,12 +125,12 @@ if (submitBtn) {
     const msg = document.getElementById('fmsg').value.trim();
 
     if (!name || !email || !msg) {
-      formNote.style.color = '#e07070';
+      formNote.style.color = '#ba1a1a';
       formNote.textContent = 'Please fill in all fields.';
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      formNote.style.color = '#e07070';
+      formNote.style.color = '#ba1a1a';
       formNote.textContent = 'Please enter a valid email address.';
       return;
     }
@@ -140,7 +140,7 @@ if (submitBtn) {
 
     setTimeout(() => {
       submitBtn.textContent = 'Message Sent ✓';
-      formNote.style.color = '#6dbf85';
+      formNote.style.color = '#004ac6';
       formNote.textContent = `Thanks, ${name}! I'll get back to you soon.`;
       document.getElementById('fname').value = '';
       document.getElementById('femail').value = '';
