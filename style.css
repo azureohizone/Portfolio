@@ -785,12 +785,31 @@ footer {
   --muted2: #737686;
   --accent: #004ac6;
   --accent2: #003ea8;
+  --on-accent: #ffffff;
   --line: #dce2f7;
   --line2: #c3c6d7;
+  --error: #ba1a1a;
   --serif: 'Geist', sans-serif;
   --sans: 'Geist', sans-serif;
   --mono: 'Inter', sans-serif;
   --radius: 4px;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #10131a;
+  --bg2: #191b23;
+  --bg3: #1d2027;
+  --ink: #e1e2ec;
+  --muted: #c2c6d6;
+  --muted2: #8c909f;
+  --accent: #adc6ff;
+  --accent2: #4d8eff;
+  --on-accent: #002e6a;
+  --line: #424754;
+  --line2: #8c909f;
+  --error: #ffb4ab;
+  color-scheme: dark;
 }
 
 body {
@@ -800,13 +819,56 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
+  transition: background-color .25s ease, color .25s ease;
 }
 
 nav {
   padding: 1.25rem max(2rem, calc((100vw - 1280px) / 2));
   background: rgba(249, 249, 255, 0.88);
   border-bottom-color: var(--line);
+  transition: background-color .25s ease, border-color .25s ease;
 }
+nav.scrolled { border-bottom-color: var(--line2); }
+
+.nav-controls { display: flex; align-items: center; gap: 1rem; }
+.theme-toggle {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--line2);
+  border-radius: 9999px;
+  background: var(--bg3);
+  color: var(--ink);
+  cursor: none;
+  transition: background-color .25s ease, border-color .25s ease;
+}
+.theme-toggle::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  transition: transform .25s ease;
+}
+.theme-toggle:hover,
+.theme-toggle:focus-visible { border-color: var(--accent); outline: none; }
+.theme-icon {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  font-size: 11px;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+.theme-icon-sun { right: 5px; }
+.theme-icon-moon { left: 5px; }
+:root[data-theme="dark"] .theme-toggle::after { transform: translateX(18px); }
+:root:not([data-theme="dark"]) .theme-icon-moon,
+:root[data-theme="dark"] .theme-icon-sun { opacity: .45; }
 
 .nav-logo { font-weight: 600; }
 .nav-links a, .hero-eyebrow, .label, .group-label, .card-category,
@@ -861,7 +923,7 @@ body:has(button:hover) .cursor { background: rgba(0, 74, 198, .08); }
   letter-spacing: .05em;
   text-transform: none;
 }
-.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary { background: var(--accent); color: var(--on-accent); }
 .btn-primary:hover, .btn-submit:hover { background: var(--accent2); }
 .btn-outline { border-color: var(--line2); color: var(--ink); background: transparent; }
 .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
@@ -955,8 +1017,29 @@ section { padding: 7.5rem max(2rem, calc((100vw - 1280px) / 2)); border-bottom-c
 }
 .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); }
 .form-group input::placeholder, .form-group textarea::placeholder { color: var(--muted2); }
-.btn-submit { background: var(--accent); color: #fff; font-family: var(--sans); cursor: none; }
+.btn-submit { background: var(--accent); color: var(--on-accent); font-family: var(--sans); cursor: none; }
 footer { background: var(--bg); border-color: var(--line); padding-inline: max(2rem, calc((100vw - 1280px) / 2)); }
+
+:root[data-theme="dark"] nav { background: rgba(16, 19, 26, .88); }
+:root[data-theme="dark"] .section-projects,
+:root[data-theme="dark"] .section-contact { background: var(--bg2); }
+:root[data-theme="dark"] .about-card,
+:root[data-theme="dark"] .contact-form-wrap,
+:root[data-theme="dark"] .project-card { box-shadow: none; }
+:root[data-theme="dark"] .project-card:hover { box-shadow: 0 12px 40px rgba(0, 0, 0, .2); }
+:root[data-theme="dark"] .project-card.featured .card-num {
+  color: var(--ink);
+  background: rgba(29, 32, 39, .92);
+}
+:root[data-theme="dark"] .v1,
+:root[data-theme="dark"] .v2,
+:root[data-theme="dark"] .v3,
+:root[data-theme="dark"] .v4 { background: linear-gradient(135deg, #191b23, #272a31); }
+:root[data-theme="dark"] .tag { background: #272a31; color: var(--muted); }
+:root[data-theme="dark"] .open-badge { background: #272a31; color: var(--accent); }
+:root[data-theme="dark"] .pill:hover { background: rgba(173, 198, 255, .08); }
+:root[data-theme="dark"] body:has(a:hover) .cursor,
+:root[data-theme="dark"] body:has(button:hover) .cursor { background: rgba(173, 198, 255, .08); }
 
 @media (max-width: 900px) {
   nav { padding: 1.2rem 1.5rem; }

@@ -1,3 +1,23 @@
+/* ─── THEME TOGGLE ─────────────────────────── */
+const themeToggle = document.getElementById('themeToggle');
+
+function updateThemeToggle(theme) {
+  if (!themeToggle) return;
+  const isDark = theme === 'dark';
+  themeToggle.setAttribute('aria-pressed', String(isDark));
+  themeToggle.setAttribute('aria-label', `Switch to ${isDark ? 'light' : 'dark'} mode`);
+}
+
+if (themeToggle) {
+  updateThemeToggle(document.documentElement.dataset.theme || 'light');
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = nextTheme;
+    try { localStorage.setItem('portfolio-theme', nextTheme); } catch (error) { /* Storage may be unavailable. */ }
+    updateThemeToggle(nextTheme);
+  });
+}
+
 /* ─── CUSTOM CURSOR ─────────────────────────── */
 const cursor = document.getElementById('cursor');
 const cursorDot = document.getElementById('cursorDot');
@@ -73,11 +93,7 @@ reveals.forEach(el => {
 /* ─── NAV SCROLL EFFECT ─────────────────────────── */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    nav.style.borderBottomColor = '#c3c6d7';
-  } else {
-    nav.style.borderBottomColor = '#dce2f7';
-  }
+  nav.classList.toggle('scrolled', window.scrollY > 60);
 });
 
 /* ─── ACTIVE NAV LINK ─────────────────────────── */
@@ -89,7 +105,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       navLinks.forEach(link => link.style.color = '');
       const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (active) active.style.color = '#004ac6';
+      if (active) active.style.color = 'var(--accent)';
     }
   });
 }, { threshold: 0.4 });
@@ -145,11 +161,11 @@ if (contactForm && submitBtn && formNote) {
 
       contactForm.reset();
       submitBtn.textContent = 'Message Sent ✓';
-      formNote.style.color = '#004ac6';
+      formNote.style.color = 'var(--accent)';
       formNote.textContent = 'Thanks! Your message has been sent successfully.';
     } catch (error) {
       submitBtn.textContent = 'Send Message';
-      formNote.style.color = '#ba1a1a';
+      formNote.style.color = 'var(--error)';
       formNote.textContent = error.message || 'Something went wrong. Please try again.';
     } finally {
       submitBtn.disabled = false;
