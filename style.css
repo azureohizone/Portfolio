@@ -538,7 +538,9 @@ section { padding: 7rem 3rem; border-bottom: 1px solid var(--line); }
 .project-card.featured .card-info { padding: 2.5rem; }
 .project-image { width: 100%; height: 100%; display: block; object-fit: cover; }
 .v2 .project-image { object-fit: contain; }
-.v3 .project-image, .v4 .project-image { object-fit: contain; }
+.v3 .project-image, .v4 .project-image, .v5 .project-image, .v6 .project-image { object-fit: contain; }
+.v6 { padding: 1.5rem; background: #fcf9f5; }
+.card-links { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
 
 .projects-more {
   margin-top: 3rem;
@@ -1034,7 +1036,9 @@ footer { background: var(--bg); border-color: var(--line); padding-inline: max(2
 :root[data-theme="dark"] .v1,
 :root[data-theme="dark"] .v2,
 :root[data-theme="dark"] .v3,
-:root[data-theme="dark"] .v4 { background: linear-gradient(135deg, #191b23, #272a31); }
+:root[data-theme="dark"] .v4,
+:root[data-theme="dark"] .v5 { background: linear-gradient(135deg, #191b23, #272a31); }
+:root[data-theme="dark"] .v6 { background: #191b23; }
 :root[data-theme="dark"] .tag { background: #272a31; color: var(--muted); }
 :root[data-theme="dark"] .open-badge { background: #272a31; color: var(--accent); }
 :root[data-theme="dark"] .pill:hover { background: rgba(173, 198, 255, .08); }
