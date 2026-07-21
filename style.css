@@ -866,8 +866,8 @@ nav.scrolled { border-bottom-color: var(--line2); }
   line-height: 1;
   transform: translateY(-50%);
 }
-.theme-icon-sun { right: 5px; }
-.theme-icon-moon { left: 5px; }
+.theme-icon-sun { left: 5px; }
+.theme-icon-moon { right: 5px; }
 :root[data-theme="dark"] .theme-toggle::after { transform: translateX(18px); }
 :root:not([data-theme="dark"]) .theme-icon-moon,
 :root[data-theme="dark"] .theme-icon-sun { opacity: .45; }
