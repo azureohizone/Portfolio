@@ -10,7 +10,7 @@ A personal developer portfolio built with HTML, CSS, and vanilla JavaScript.
 ## Sections
 1. **Hero** — Name, tagline, CTA
 2. **About** — Bio, facts card, experience timeline
-3. **Projects** — 4 project cards with illustrated mockups
+3. **Projects** — 7 project cards with screenshots and mockups
 4. **Skills** — Grouped by category (languages, tools, soft skills, human languages)
 5. **Contact** — Social links + message form
 
