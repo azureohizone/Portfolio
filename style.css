@@ -470,6 +470,7 @@ section { padding: 7rem 3rem; border-bottom: 1px solid var(--line); }
 .v3 { background: linear-gradient(135deg, #1a1510, #1a1208); }
 .v4 { background: linear-gradient(135deg, #0d1a1a, #081212); }
 .v7 { background: linear-gradient(135deg, #141a24, #0f131a); }
+.v8 { background: linear-gradient(135deg, #121319, #090a0d); }
 
 .card-num {
   position: absolute; top: 1rem; left: 1.2rem;
@@ -1007,6 +1008,7 @@ section { padding: 7.5rem max(2rem, calc((100vw - 1280px) / 2)); border-bottom-c
 .v3 { background: linear-gradient(135deg, #e9edff, #dce2f7); }
 .v4 { background: linear-gradient(135deg, #f1f3ff, #dbe1ff); }
 .v7 { background: linear-gradient(135deg, #e4ecf7, #f1f5fb); }
+.v8 { background: linear-gradient(135deg, #0f1117, #1a1d26); }
 .mock-bar, .mock-title, .mock-row, .mock-cell, .mock-header-mobile,
 .pin, .sb-item, .mock-table-row, .mock-labels span { background: rgba(20, 27, 43, .12); }
 .mock-title, .mock-table-row.header { background: rgba(20, 27, 43, .22); }
@@ -1052,7 +1054,8 @@ footer { background: var(--bg); border-color: var(--line); padding-inline: max(2
 :root[data-theme="dark"] .v3,
 :root[data-theme="dark"] .v4,
 :root[data-theme="dark"] .v5,
-:root[data-theme="dark"] .v7 { background: linear-gradient(135deg, #191b23, #272a31); }
+:root[data-theme="dark"] .v7,
+:root[data-theme="dark"] .v8 { background: linear-gradient(135deg, #191b23, #272a31); }
 :root[data-theme="dark"] .v6 { background: #191b23; }
 :root[data-theme="dark"] .tag { background: #272a31; color: var(--muted); }
 :root[data-theme="dark"] .open-badge { background: #272a31; color: var(--accent); }
